@@ -175,7 +175,7 @@ pca <- function(input, output, session, data) {
   
   loads <- l_pca()[["df_load"]]  
   # first  k components    
-  barplot(loads[, input$k_c], 
+  graphics::barplot(loads[, input$k_c], 
         main  = paste0("PCA  component: ", input$k_c), 
         col = "red")
     
@@ -188,12 +188,12 @@ pca <- function(input, output, session, data) {
     
     if(input$plot2 == "stat_2c") {
       scores <-l_pca()[["df_scores"]]
-      plot(scores[, 1:2], main = "Stat-Units against first two PC")              
+      graphics::plot(scores[, 1:2], main = "Stat-Units against first two PC")              
     }
     if(input$plot2 == "cum_sd") {
       
       df <- l_pca()[["cum_var"]]
-      plot(df, main = "Cumulative Standar Deviation",
+      graphics::plot(df, main = "Cumulative Standar Deviation",
            type = "b", 
            xlab = "Principal Components", 
            ylab = "Cumulative Standard Deviation",

@@ -1,11 +1,3 @@
-# load functions -----
-# folder <- "C://Users//Utente//Desktop//shiny_modules//functions"
-
-# source(paste(folder, "utils.R", sep = "//"))
-# source(paste(folder, "graphics.R", sep = "//"))
-# source(paste(folder, "datatransformation.R", sep = "//"))
-# source(paste(folder, "functioncalls.R", sep = "//"))
-
 # univariate testing and data transformation-----
 
 # create UI module

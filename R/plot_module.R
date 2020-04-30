@@ -1,13 +1,4 @@
-# UI module: histogram, scatter 1/2 vars, boxplot, timeseries plot
-# makes sure the function in  "C://Users//Utente//Desktop//shiny_modules//functions"
-# are loaded 
-
-# # load functions
-# folder <- "C://Users//Utente//Desktop//shiny_modules//functions"
-# 
-# source(paste(folder, "utils.R", sep = "//"))
-# source(paste(folder, "graphics.R", sep = "//"))
-
+# UI module: histogram, scatter 1/2 vars, boxplot
 # define UI
 #' Automatic Data Visualization in Shiny
 #'
@@ -57,7 +48,7 @@ typeplotUi <- function(id) {
 #' @param data A Dataframe
 #'
 #' @return A Shiny server module
-#' @import dplyr 
+#' @import dplyr graphics shiny 
 #' @export
 #'
 #' @examples
@@ -381,7 +372,7 @@ typeplot <- function(input, output, session, data) {
         
         # do boxplot aggregated (of the selected numerical vars)
         data[l_vars[["num_vars"]]] %>%
-          boxplot(main = "Vars Box plot")
+          graphics::boxplot(main = "Vars Box plot")
       }
       
       if(type_pl() == "plot_1var") {
