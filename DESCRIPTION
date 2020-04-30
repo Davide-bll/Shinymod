@@ -1,0 +1,15 @@
+Package: shinymod
+Type: Package
+Title: Help building Shiny modules
+Version: 0.1.0
+Author: Davide Ballada
+Maintainer: Davide Ballada <davide.ballada@mail.polimi.it>
+Description: It colllects different types of Data elaboration Shiny Modules.    Useful for building small Shiny App
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: car, dplyr, feather, ggplot2, leaflet, lubridate, purrr, RColorBrewer,
+        stats, shiny, tibble, utils
+RoxygenNote: 7.1.0
+NeedsCompilation: no
+Packaged: 2020-04-17 20:57:49 UTC; Utente
