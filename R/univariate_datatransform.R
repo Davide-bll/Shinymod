@@ -14,7 +14,7 @@
 #' @param id 
 #'
 #' @return Ui Module
-#' @import dplyr
+#' @import dplyr shiny
 #' @export
 #'
 dataTransformUi <- function(id) {
@@ -37,10 +37,12 @@ dataTransformUi <- function(id) {
 
 # server logic
 #' DataTransform server function
-#'
+#' @param input
+#' @param output
+#' @param session
 #'
 #' @return A Server function
-#' @import dplyr
+#' @import dplyr shiny
 #' @export
 #'
 #' @examples
