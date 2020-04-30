@@ -6,6 +6,9 @@
 \usage{
 dataTransform(input, output, session)
 }
+\arguments{
+\item{session}{}
+}
 \value{
 A Server function
 }

@@ -179,7 +179,8 @@ leafletMap <- function(input, output, session, data, date_col = "datetime",
   })
   
   # color palette function: is not reactive, and it's for the trajectories
-  colorpal2 <- colorFactor(rownames(subset(brewer.pal.info, brewer.pal.info[["category"]] %in% c("seq", "div")))[5], 
+  colorpal2 <- colorFactor(rownames(subset(RcolorBrewer::brewer.pal.info, 
+                                           RcolorBrewer::brewer.pal.info[["category"]] %in% c("seq", "div")))[5], 
                            domain = NULL)
   
   # criteria of grouping
