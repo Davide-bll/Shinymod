@@ -153,6 +153,7 @@ dataTransform <- function(input, output, session) {
     
     # create grid of plots
     plots_vec <- unlist(plots, recursive = FALSE)
+    # need to changed, use DO.call here
     expandCall(x = list(nrow = length(plots)), f = "gridExtra::grid.arrange", plots_vec)
   })
   
