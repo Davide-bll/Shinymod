@@ -50,7 +50,7 @@ pcaUI <- function(id) {
 #' @param data  A Dataframe
 #'
 #' @return
-#' @import dplyr shiny stats
+#' @import dplyr shiny
 #' @export
 #'
 #' @examples

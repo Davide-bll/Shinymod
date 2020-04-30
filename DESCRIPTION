@@ -9,7 +9,7 @@ License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 Imports: car, dplyr, feather, ggplot2, leaflet, lubridate, purrr, RColorBrewer,
-        stats, shiny, tibble, utils
+         shiny, tibble, utils
 RoxygenNote: 7.1.0
 NeedsCompilation: no
 Packaged: 2020-04-17 20:57:49 UTC; Utente

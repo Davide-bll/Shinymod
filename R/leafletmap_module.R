@@ -139,7 +139,8 @@ leafletMap <- function(input, output, session, data, date_col = "datetime",
     # # find consistent trajectories
     ns <- session$ns
     
-    req(end_date, pvec)
+    req(end_date(), pvec())
+    
     l_values <- user_filter_m(data, list(date_col, points_col), list(end_date(), pvec())) %>% 
       pull(!!sym(traj_col)) %>% unique()
     
@@ -179,8 +180,7 @@ leafletMap <- function(input, output, session, data, date_col = "datetime",
   })
   
   # color palette function: is not reactive, and it's for the trajectories
-  colorpal2 <- colorFactor(rownames(subset(RcolorBrewer::brewer.pal.info, 
-                                           RcolorBrewer::brewer.pal.info[["category"]] %in% c("seq", "div")))[5], 
+  colorpal2 <- leaflet::colorFactor(rownames(subset(brewer.pal.info, category %in% c("seq", "div")))[5], 
                            domain = NULL)
   
   # criteria of grouping
