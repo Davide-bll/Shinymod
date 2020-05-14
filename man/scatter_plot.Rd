@@ -11,7 +11,8 @@ scatter_plot(
   x_limits = NULL,
   y_limits = NULL,
   color = NULL,
-  title = "Scatter"
+  title = "Scatter",
+  wrap = NULL
 )
 }
 \arguments{
@@ -28,6 +29,8 @@ scatter_plot(
 \item{color}{chr.  Name of the variable to which apply color logic.}
 
 \item{title}{Optional.}
+
+\item{wrap}{chr. column to which apply facet_wrap, y scale is free}
 }
 \value{
 ggplot object

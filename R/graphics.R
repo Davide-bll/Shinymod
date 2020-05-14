@@ -40,7 +40,8 @@ df_hist <- function(df, x_col, title = "Aggregate", custom = NULL) {
 #' @param y col name of y axis
 #' @param x_limits interval to filter x axis
 #' @param y_limits interval to filter y axis
-#' @param color chr.  Name of the variable to which apply color logic. 
+#' @param color chr.  Name of the variable to which apply color logic.
+#' @param wrap chr. column to which apply facet_wrap, y scale is free 
 #' @param title Optional.
 #'
 #' @import ggplot2 dplyr
@@ -48,7 +49,7 @@ df_hist <- function(df, x_col, title = "Aggregate", custom = NULL) {
 #' @return ggplot object
 #'
 scatter_plot <- function(df, x = NULL, y, x_limits = NULL, y_limits = NULL, 
-                         color = NULL, title = "Scatter") {
+                         color = NULL, title = "Scatter", wrap = NULL) {
   
   
   if(!is.null(x_limits)) {
@@ -81,6 +82,7 @@ scatter_plot <- function(df, x = NULL, y, x_limits = NULL, y_limits = NULL,
            title = title)
     
   }
+  if(!is.null(wrap)) res <- res + facet_wrap(wrap, scales = "free_y")
   
   return(res)
 }
