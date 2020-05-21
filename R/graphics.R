@@ -116,9 +116,9 @@ normal_plots <- function(x, title_list = list(hist = "histogram",
   qqn <- qqnorm(scale(x)) %>% 
     as_tibble() %>% 
     rename(theoretical = x, 
-           sample = y) 
+           sample_scaled = y) 
   
-  qqn <- scatter_plot(qqn, x = "theoretical", y = "sample scaled", 
+  qqn <- scatter_plot(qqn, x = "theoretical", y = "sample_scaled", 
                       title = title_list[["qqnorm"]]) 
   
   qqn <- qqn + geom_abline(slope = 1, intercept = 0)
