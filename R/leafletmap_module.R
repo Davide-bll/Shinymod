@@ -223,7 +223,10 @@ leafletMap <- function(input, output, session, data, date_col = "datetime",
     proxy <-     leafletProxy(mapId = "my_leaf") %>%
       clearMarkers() # clear previous markers, otherwise the circles won't be reactive
     
-    addCircles_map(proxy, data = df_filtered_history(), points_col = points_col, pal = pal)
+    addCircles_map(proxy, 
+                   data = df_filtered_history(), 
+                   points_col = points_col, 
+                   pal = pal)
     
     
   })
