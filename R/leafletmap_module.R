@@ -246,8 +246,8 @@ leafletMap <- function(input, output, session, data, date_col = "datetime",
       proxy <- leafletProxy("my_leaf") %>% 
         clearShapes()
       
-      # create list of dataframe: splitting rule -> person id
-      l_data <- split(df_filtered_history(), df_filtered_history()[[points_col]]) 
+      # create list of dataframe: splitting rule -> trajectory col
+      l_data <- split(df_filtered_history(), df_filtered_history()[[traj_col]]) 
       
       
       
