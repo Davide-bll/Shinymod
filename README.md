@@ -62,7 +62,7 @@ and you'll get something like:
 
 
 
-![](img_readme/agg_plot.JPG?raw=true)
+![](img_readme/agg_plot.jpg?raw=true)
 
 Since *aggregate* is the default value of typeplot, you'll see all the observation plotted. 
 If you want to differentiate the treatments, just select the column treatments from the *typeplot* panel:
