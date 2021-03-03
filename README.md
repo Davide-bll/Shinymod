@@ -1,4 +1,4 @@
-# Helper Package building shiny modules for data visualization
+# Automatic Data Visualization with Shiny Modules.
 
 ### Install package
 To install the package, you can use 
@@ -6,6 +6,7 @@ To install the package, you can use
 ```
 devtools::install_github(Davide-bll/Shinymod)
 ```
+
 
 ## Main modules
 ### Plot Module
@@ -69,5 +70,6 @@ If you want to differentiate the treatments, just select the column treatments f
 
 ![](img_readme/grp_plot.jpg?raw=true)
 
-To see an example of a data exploration app, see this [data exploarion app](https://www.google.com)
+To see a more concrete of a data exploration app, see this [data exploarion app](https://github.com/Davide-bll/Shinymod/blob/master/examples/data_exploration_app.R), 
+which load a local file, (csv, txt, or feather), and do some basic filtering and automatic Data visualization
 
