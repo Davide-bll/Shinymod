@@ -70,6 +70,8 @@ If you want to differentiate the treatments, just select the column treatments f
 
 ![](img_readme/grp_plot.jpg?raw=true)
 
-To see a more concrete of a data exploration app, see this [data exploarion app](https://github.com/Davide-bll/Shinymod/blob/master/examples/data_exploration_app.R), 
-which load a local file, (csv, txt, or feather), and do some basic filtering and automatic Data visualization
+To see a more concrete of a data exploration app, see this [data exploarion app](https://teleworkingproject.shinyapps.io/data_exploration_app/), 
+which load a local file, (csv, txt, or feather), and do some basic filtering and automatic Data visualization.
+
+The code for the App is at this [file](https://github.com/Davide-bll/Shinymod/blob/master/examples/data_exploration_app.R)
 
