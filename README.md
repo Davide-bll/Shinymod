@@ -69,3 +69,5 @@ If you want to differentiate the treatments, just select the column treatments f
 
 ![](img_readme/grp_plot.jpg?raw=true)
 
+To see an example of a data exploration app, see this [data exploarion app](https://www.google.com)
+

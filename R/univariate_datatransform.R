@@ -19,7 +19,7 @@ dataTransformUi <- function(id) {
       textInput(ns("formula"),  label = "Custom formula, es: x^2, NA if not used"),
       checkboxInput(ns("man"), "Add Manual transformation"),
       uiOutput(ns("man_t")),
-      actionButton(ns("generate"), "Generate") 
+      actionButton(ns("generate"), "Generate Box Cox Transformations") 
       
     ),
     mainPanel(htmlOutput(ns("test")), 
