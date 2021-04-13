@@ -12,19 +12,39 @@
 #' @export
 #' @return histogram object
 #'
+# df_hist <- function(df, x_col, title = "Aggregate", custom = NULL) {
+#   
+#   if(is.null(custom)) {
+#     n <- min(100, nrow(df)/3)
+#     custom <- (max(df[[x_col]]) - min(df[[x_col]]))/n
+#   }
+#   
+#   # create histogram object
+#   df_h <- df %>%
+#     ggplot(aes_string(x = x_col)) +
+#     geom_histogram(fill ="darkblue", color = "black", 
+#                    binwidth = custom) 
+#     labs(title = paste(x_col, title, sep = "  -  "))
+#   
+#   df_h
+# }
 df_hist <- function(df, x_col, title = "Aggregate", custom = NULL) {
   
   if(is.null(custom)) {
-    n <- min(100, nrow(df)/3)
-    custom <- (max(df[[x_col]]) - min(df[[x_col]]))/n
-  }
-  
+    df_h <- df %>%
+      ggplot(aes_string(x = x_col)) +
+      geom_histogram(fill ="darkblue", color = "black", 
+                     binwidth = custom) + 
+      labs(title = paste(x_col, title, sep = "  -  "))
+  } else {
+    
   # create histogram object
   df_h <- df %>%
     ggplot(aes_string(x = x_col)) +
-    geom_histogram(fill ="darkblue", color = "black", 
-                   binwidth = custom) + 
+    geom_histogram(fill ="darkblue", color = "black") + 
     labs(title = paste(x_col, title, sep = "  -  "))
+  }
+  
   
   df_h
 }
